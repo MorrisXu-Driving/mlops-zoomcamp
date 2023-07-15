@@ -16,3 +16,21 @@ pull:
     repository: https://github.com/MorrisXu-Driving/mlops-zoomcamp.git
     branch: main
     access_token: null
+- prefect.deployments.steps.set_working_directory:
+    directory: /home/morris_xu/mlops-zoomcamp/04-deployment/batch
+
+
+deployments:
+- name: null
+  version: null
+  tags: []
+  description: null
+  schedule: {}
+  flow_name: null
+  entrypoint: ./score.py:ride_duration_prediction
+  parameters: {}
+  work_pool:
+    name: local-worker
+    work_queue_name: null
+    job_variables: {}
+
